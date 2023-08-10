@@ -1,4 +1,5 @@
-output "domain_name" {
-  description = "Public domain name of EC2 instance"
-  value       = "${aws_instance.web.public_dns}:8080"
+output "lambda_bucket_name" {
+  description = "Name of the S3 bucket used to store function code"
+
+  value = aws_s3_bucket.lambda_bucket.id
 }
