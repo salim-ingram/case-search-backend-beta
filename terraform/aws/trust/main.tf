@@ -50,7 +50,21 @@ resource "aws_iam_policy" "tfc_policy" {
    {
      "Effect": "Allow",
      "Action": [
-       "ec2:*"
+       "s3:*"
+     ],
+     "Resource": "*"
+   },
+   {
+     "Effect": "Allow",
+     "Action": [
+       "lambda:*"
+     ],
+     "Resource": "*"
+   },
+   {
+     "Effect": "Allow",
+     "Action": [
+       "execute-api:*"
      ],
      "Resource": "*"
    }
