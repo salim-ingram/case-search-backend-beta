@@ -6,7 +6,11 @@ terraform {
     }
     random = {
       source  = "hashicorp/random"
-      version = "3.4.3"
+      version = "~> 3.4.3"
+    }
+    archive = {
+      source  = "hashicorp/archive"
+      version = "~> 2.2.0"
     }
   }
   cloud {
@@ -14,5 +18,5 @@ terraform {
       name = "case-search-backend-beta"
     }
   }
-  required_version = ">= 1.1.0"
+  required_version = "~> 1.2"
 }
